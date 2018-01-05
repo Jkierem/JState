@@ -1,20 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { dispatch , getState } from './jstate';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+dispatch({ type: "ADD_FLOWER" , flower: "tullips" , count: 1 });
+dispatch({ type: "NEW_POT"    , color : "green"   , count: 1 });
+dispatch({ type: "ADD_POT"    , color : "green"   , count: 5 });
+
+//Example usage of JState
+class App extends React.Component{
+  
+
+  renderFlowers = () =>{
+    let ret = []
+    ret.push(<h1>Flowers</h1>)
+    let flowers = getState()["flowers"];
+    console.log(flowers);
+  }
+
+  renderPots = () =>{
+
+  }
+
+  render = () =>{
+    const { renderFlowers , renderPots } = this;
+    return(
+      <div>
+        <div>
+          {renderFlowers()}
+        </div>
+        <div>
+          {renderPots()}
+        </div>
+      </div>)
   }
 }
 
