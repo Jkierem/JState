@@ -21,10 +21,31 @@ export const objectToString = (object) =>{
 
 export const countAttributes = (object) =>{
 	let count = 0;
-	for (var att in object) {
+	for (let att in object) {
 		if (object.hasOwnProperty(att)) {
 			count++;
 		}
 	}
 	return count;
+}
+
+export const shallowObjectEquals = (obj1 , obj2) =>{
+	if( typeof(obj1) === "object" && typeof(obj2) === "object" ){
+		for (let key in obj1) {
+			if (obj1.hasOwnProperty(key)) {
+				if( typeof(obj1[key]) !== "object" && typeof(obj2[key]) !== "object" ){
+					if( obj1[key] !== obj2[key] ){
+						return false;
+					}
+				}else{
+					if( !shallowObjectEquals( obj1[key] , obj2[key] ) ){
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}else{
+		return obj1 === obj2
+	}
 }
