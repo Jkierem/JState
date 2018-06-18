@@ -1,16 +1,15 @@
 {
   "name": "juanstate",
   "version": "1.0.2",
-  "private": true,
+  "description": "Simple state handler for react",
+  "author": "jkierem",
+	"license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jkierem/JuanState"
+  },
   "dependencies": {
     "react": "~16.4.1",
-    "react-dom": "~16.4.1",
-    "react-scripts": "~1.1.4"
-  },
-  "scripts": {
-    "start": "PORT=3004 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "react-dom": "~16.4.1"
   }
 }
