@@ -1,5 +1,5 @@
-import WareHouse from './src/WareHouse';
-import * as Utils from './src/Utils';
+import WareHouse from './WareHouse';
+import * as Utils from './Utils';
 
 export default WareHouse;
 export { Utils };
@@ -10,4 +10,4 @@ export {
   getStore ,
   hasStateChanged ,
   inject ,
-  Reducer } from './src/Store';
+  Reducer } from './Store';

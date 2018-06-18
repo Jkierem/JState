@@ -1,5 +1,5 @@
 import React from 'react';
-import { dispatch , getState , hasStateChanged , inject } from 'juanstate';
+import { dispatch , getState , hasStateChanged , inject } from '../juanstate';
 
 //Example usage of JState
 class App extends React.Component{

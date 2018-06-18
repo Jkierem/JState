@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import WareHouse , { Reducer , combineReducers } from './jstate'
+import WareHouse , { Reducer , combineReducers } from '../juanstate'
 
 let flowers=(state={},action)=>{
 	const { flower , count=undefined } = action
