@@ -10,4 +10,4 @@ export {
   getStore ,
   hasStateChanged ,
   inject ,
-  Reducer } from './Store';
+  Reducer } from './src/Store';
