@@ -1,6 +1,7 @@
 # JuanState
 
 Simple state handler to use with react. It is more of a proof of concept than actual tool.
+This repo contains an example of how to use JuanState.
 
 ## Usage
 

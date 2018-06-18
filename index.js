@@ -1,5 +1,5 @@
-import WareHouse from './WareHouse';
-import * as Utils from './Utils'
+import WareHouse from './src/WareHouse';
+import * as Utils from './src/Utils';
 
 export default WareHouse;
 export { Utils };
